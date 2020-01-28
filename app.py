@@ -72,16 +72,16 @@ def add_product():
 
 
 # PUT/PATCH by ID
-@app.route("/product/<id>", methods=["PATCH"])
-def update_product(id):
-product = Product.query.get(id)
+# @app.route("/product/<id>", methods=["PUT"])
+# def update_product(id):
+# product = Product.query.get(id)
 
-new_done = request.json["done"]
+# new_done = request.json["done"]
 
-product.done = new_done
+# product.done = new_done
 
-db.session.commit()
-return product_schema.jsonify(product)
+# db.session.commit()
+# return product_schema.jsonify(product)
 
 # DELETE
 @app.route("/product/<id>", methods=["DELETE"])
